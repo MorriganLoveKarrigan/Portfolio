@@ -7,21 +7,23 @@
   z-index: 3;
   min-height: 500px;
 
-    .logo {
+  .logo {
+    display: block;
+    padding: 8px 0;
+
+    img {
       display: block;
-      padding: 8px 0;
+      margin: 8px auto;
+      width: 100%;
+      height: auto;
+      border-radius: 40%;
+      opacity: 0.8;
 
-      img {
-        display: block;
-        margin: 8px auto;
-        width: 24px;
-        height: auto;
-
-        &.sub-logo {
-          width: 50px;
-        }
+      &.sub-logo {
+        width: 50px;
       }
     }
+  }
 
   nav {
     display: block;
@@ -32,88 +34,90 @@
     margin-top: -120px;
     width: 100%;
 
-      a{
-        font-size: 22px;
-        color: #4d4d4e;
-        display: block;
-        line-height: 51px;
-        height: 51px;
-        position: relative;
-        text-decoration: none;
+    a {
+      font-size: 22px;
+      color: #4d4d4e;
+      display: block;
+      line-height: 51px;
+      height: 51px;
+      position: relative;
+      text-decoration: none;
 
-         i {
-           transition: all 0.3s ease-out;
-         }
-        &:hover {
-          color: #ffd700;
+      i {
+        transition: all 0.3s ease-out;
+      }
 
-          svg {
-            opacity: 0;
-          }
+      &:hover {
+        color: #ffd700;
 
-          &:after {
-            opacity: 1;
-          }
-        }
-        &:after {
-          content: '';
-          font-size: 9px;
-          letter-spacing: 2px;
-          position: absolute;
-          bottom: 0;
-          display: block;
-          width: 100%;
-          text-align: center;
+        svg {
           opacity: 0;
-          transition: all 0.3s ease-out;
         }
 
-        &:first-child {
-          &::after{
-            content: "HOME";
-          }
+        &:after {
+          opacity: 1;
         }
       }
+
+      &:after {
+        content: '';
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+
+      &:first-child {
+        &::after {
+          content: "HOME";
+        }
+      }
+    }
+
     a.about-link {
       &:after {
         content: "ABOUT";
       }
     }
+
     a.contact-link {
       &:after {
         content: "CONTACTS";
       }
     }
+
     a.active {
       svg {
         color: #ffd700;
       }
     }
+  }
+}
 
-  ul {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: block;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    margin: 0;
+ul {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: block;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  li {
+    a{
+      padding: 7px 0 ;
+      display: block;
+      font-size: 15px;
+      line-height: 16px;
 
-    li {
-      a{
-        padding: 7px 0 ;
-        display: block;
-        font-size: 15px;
-        line-height: 16px;
-
-        &:hover svg {
-          color: #ffd700;
-        }
+      &:hover svg {
+        color: #ffd700;
       }
     }
   }
-
-  }
-
 }
